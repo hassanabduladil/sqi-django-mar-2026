@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Dashboard</title>
+</head>
+<body>
+    <!-- 1. Basic Variables -->
+    <h1><!-- TODO: Show library name -->{{ library_name }}</h1>
+    <p>Librarian: {{ librarian }}<!-- TODO: Show librarian's name --></p>
+    <p>Today's Date: {{ current_date|date:"l, d F Y" }}<!-- TODO: Format and display current_date --></p>
+    <h3>{{ featured_message }}<!-- TODO: Show featured_message --></h3>
+
+    <!-- 2. Conditional Greeting -->
+    {% if is_weekend %}
+    <p>Welcome to a new weekend at the library<!-- TODO: If is_weekend is true, show weekend greeting, else show weekday greeting --></p>
+    {% else %}
+    <p>Welcome to a new weekday at the library<!-- TODO: If is_weekend is true, show weekend greeting, else show weekday greeting --></p>
+    {% endif %}
+
+    <!-- 3. Books List -->
+    <h2>Books Collection</h2>
+    <ul>
+        <!-- TODO: Loop through books -->{% for book in books %}
+        
+        
+        <li>
+            <p><!-- TODO: Show book title in uppercase -->{{ book.title|upper }} by {{ book.author }} ({{ book.publication_year}})</p>
+            <!-- TODO: Show author, publication year, and category -->{{ book.author }}
+            <p><!-- TODO: Show ISBN -->ISBN: {{ book.isbn }}</p>
+            <p><!-- TODO: Show price formatted as currency -->Price: ₦{{ book.price }}</p>
+            <!-- TODO: If available_copies > 0, show availability, else "Out of Stock" -->{% if book.available_copies > 0 %}
+            <p>Available ({{ book.available_copies }} copies)</p>
+            {% else %}
+            <p>Out of Stock</p>
+            {% endif %}
+            <!-- TODO: If book is_featured, show "FEATURED" -->{% if book.is_featured %}
+            <p>FEATURED</p>
+            {% else %}
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <!-- 4. Library Statistics -->
+    <h2>Library Statistics</h2>
+    <ul>
+        <li>Total Members: {{ library_stats.total_members }}</li><!-- TODO: Show total_members -->
+        <li>Books borrowed today: {{ library_stats.books_borrowed_today }}</li><!-- TODO: Show books_borrowed_today -->
+        <li>Overdue Books: {{ library_stats.overdue_books }}</li><!-- TODO: Show overdue_books -->
+        <li>New Arrivals This Month: {{ library_stats.new_arrivals_this_month }}</li><!-- TODO: Show new_arrivals_this_month -->
+    </ul>
+    <h1>{% now 'Y' %}</h1>
+</body>
+</html>

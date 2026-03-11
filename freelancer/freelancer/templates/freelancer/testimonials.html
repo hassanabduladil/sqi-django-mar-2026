@@ -1,0 +1,20 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <h1>Testimonials page</h1>
+    <p>All my testimonials</p>
+
+    {% for name, testimony in testimonials.items %}
+        <p><b>{{ name }}</b>: {{ testimony }}</p>
+
+    {% endfor %}
+
+
+    <img src="{% static 'images/img1.jpg' %}" width="300" height="300" />
+    <img src="{% static 'images/img1.jpg' %}" width="300" height="300" />
+    <img src="{% static 'images/christian.jpg' %}" width="300" height="300" />
+
+{% endblock content %}

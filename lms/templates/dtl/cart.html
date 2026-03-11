@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <!-- 1. Greeting -->
+    <h2>Hello {{ customer|upper }}!</h2>
+
+    <!-- 2. Cart Items -->
+    <h3>Your Cart:</h3>
+    <table border="1" cellpadding="5">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- TODO: Loop through cart_items -->
+            {% for item in cart_items %}
+                <tr>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.price }}</td>
+                    <td>{{ item.quantity }}</td>
+                </tr>
+                
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- 3. Conditional -->
+    {% if has_discount%}
+    <p><!-- TODO: Show discount message if has_discount is true -->You have a dicount available</p>
+    {% else %}
+    {% endif %}
+    
+    <!-- 4. Store Info -->
+    <p><!-- TODO: Show store name and city -->Shopping at {{ store.name }}, {{ store.city }}</p>
+
+    <!-- 5. Filters -->
+    <p>Today is: <!-- TODO: Show formatted date -->{{ today|date:"l, d F Y" }}</p>
+    <p>Total different items in cart: {{ cart_items|length }}<!-- TODO: Show length of cart_items --></p>
+</body>
+</html>

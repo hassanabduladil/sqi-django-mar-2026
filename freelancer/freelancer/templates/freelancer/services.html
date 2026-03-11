@@ -1,0 +1,17 @@
+{% extends 'partials/base.html' %}
+{% block content %}
+
+    <h1>All Freelancer Services</h1>
+
+    <ul>
+        {% for service in services %}
+            <li> {{ service }}</li>
+        {% endfor %}
+    </ul>
+
+<h1>Services in list paragraphs</h1>
+      {% for service in services %}
+            <p> {{ forloop.counter }}  {{ service }}</p>
+        {% endfor %}
+  
+{% endblock content %}

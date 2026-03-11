@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer project</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <nav>
+        <h1>Freelancer </h1>
+
+        <ul>
+            <li><a href="{% url 'freelanceapp:home' %}" class="text-3xl">Home</a></li>
+            <li><a href="{% url 'freelanceapp:services' %}">Services</a></li>
+            <li><a href="{% url 'freelanceapp:testimonials' %}">Testimonials</a></li>
+            <li><a href="">Case studies</a></li>
+            <li><a href="">Pricing</a></li>
+            <li><a href="{% url 'vendor:vendors-list' %}">Vendors List</a></li>
+            <li><a href="{% url 'freelanceapp:blog' %}">Blog</a></li>
+        </ul>
+    </nav>
+
+
+    {% block content %}
+
+    {% endblock content %}
+
+    <footer>
+        <p>&copy; {% now 'Y' %}. All rights reserved </p>
+    </footer>
+
+    
+</body>
+</html>
