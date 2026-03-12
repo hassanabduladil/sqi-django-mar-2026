@@ -1,0 +1,82 @@
+/* ABOUT PAGE HEADER */
+
+.page-header {
+    text-align: center;
+    background: #e8f0f8;
+    padding: 60px 20px;
+}
+
+.page-header h1 {
+    font-size: 36px;
+    color: #2c7be5;
+}
+
+/* ABOUT PAGE CONTENT */
+
+.about-page {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.about-grid {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    font-size: 17px;
+    color: #555;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.about-image img:hover {
+    transform: scale(1.03);
+}
+
+/* MISSION STATEMENT OR HIGHLIGHTS */
+
+.about-highlight {
+    background: #f4f7fb;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.about-highlight h2 {
+    color: #2c7be5;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about-highlight p {
+    font-size: 17px;
+    color: #555;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+    .about-grid {
+        flex-direction: column;
+    }
+}

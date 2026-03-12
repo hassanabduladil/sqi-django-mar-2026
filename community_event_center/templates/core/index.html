@@ -1,0 +1,75 @@
+{% extends "partials/base.html" %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-overlay">
+        <h2>Welcome to the Community Event Portal</h2>
+        <p>
+            Discover workshops, social gatherings, and exciting activities
+            happening at our community center.
+        </p>
+
+        <a href="{% url 'events' %}" class="primary-btn">Explore Events</a>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about-section">
+    <div class="about-container">
+        <div class="about-text">
+            <h2>About Our Community Center</h2>
+            <p>
+                Our community center is a vibrant place where people connect,
+                learn new skills, and participate in fun events. From creative
+                workshops to social meetups, we aim to bring people together
+                and strengthen our local community.
+            </p>
+        </div>
+
+        <div class="about-image">
+            <img src="{% static 'images/community-center.jpg' %}" alt="Community Center">
+        </div>
+    </div>
+</section>
+
+<!-- FEATURED EVENT -->
+<section class="featured-section">
+    <h2>Featured Event</h2>
+
+    <div class="event-card">
+        <img src="{% static 'images/art-workshop.jpg' %}" alt="Art Workshop">
+
+        <div class="event-content">
+            <h3>Community Art Workshop</h3>
+            <p class="event-date">Saturday • July 20</p>
+            <p>
+                Join our creative art workshop where local artists will guide
+                participants through painting and drawing techniques.
+            </p>
+
+            <a href="{% url 'events' %}" class="secondary-btn">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<!-- COMMUNITY GALLERY -->
+<section class="gallery-section">
+    <h2>Community Moments</h2>
+
+    <div class="gallery-grid">
+        <img src="{% static 'images/event1.jpg' %}" alt="Event Image">
+        <img src="{% static 'images/event2.jpg' %}" alt="Event Image">
+        <img src="{% static 'images/event3.jpg' %}" alt="Event Image">
+        <img src="{% static 'images/event4.jpg' %}" alt="Event Image">
+    </div>
+</section>
+
+{% endblock %}

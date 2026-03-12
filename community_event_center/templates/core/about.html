@@ -1,0 +1,40 @@
+{% extends "partials/base.html" %}
+{% load static %}
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <h1>About Our Community Center</h1>
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+</section>
+
+<section class="about-page">
+    <div class="about-grid">
+        <div class="about-text">
+            <p>
+                Our community center is a welcoming space designed to bring
+                people together. It serves as a hub where individuals and
+                families can connect, learn new skills, and participate in
+                meaningful activities.
+            </p>
+
+            <p>
+                We host workshops, educational seminars, art classes,
+                fitness sessions, and social gatherings throughout the year.
+                These events strengthen community relationships and inspire
+                personal growth.
+            </p>
+
+            <p>
+                Our mission is to create an inclusive environment where
+                everyone feels welcome. We aim to inspire collaboration,
+                learning, and creativity through engaging experiences.
+            </p>
+        </div>
+
+        <div class="about-image">
+            <img src="{% static 'images/community-center.jpg' %}" alt="Community Center">
+        </div>
+    </div>
+</section>
+{% endblock %}
