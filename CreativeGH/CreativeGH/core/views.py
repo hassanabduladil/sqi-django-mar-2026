@@ -1,5 +1,4 @@
 from django.shortcuts import render
-
 # Create your views here.
 
 def index(request):
@@ -7,3 +6,9 @@ def index(request):
 
 def services(request):
     return render(request, 'core/services.html')
+
+def portfolio(request):
+    return render(request, 'core/portfolio.html')
+
+def contact(request):
+    return render(request, 'core/contact.html')
