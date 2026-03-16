@@ -7,5 +7,22 @@
 </head>
 <body>
     <h1>List Of Books</h1>
+
+
+    <div>
+    <h1>All Books</h1>
+    <ul>
+    {% for book in all_books %}
+        <li>{{ book }}</li>
+    {% endfor %}
+    </ul>
+</div>
+
+<div>
+    <h3>Books in descending order</h3>
+    <ul>
+        <li>{{ books_in_desc }}</li>
+    </ul>
+</div>
 </body>
 </html>
