@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="page-header">
+
+<h1>Albums</h1>
+<p>Browse the albums that defined music history.</p>
+
+</section>
+
+<div class="album-grid">
+
+{% for album in albums %}
+
+<div class="album-card">
+
+<div class="album-cover">
+
+<img src="{{ album.cover.url }}" alt="{{ album.title }}">
+
+</div>
+
+<div class="album-details">
+
+<h3>{{ album.title }}</h3>
+
+<p class="album-artist">{{ album.artist.name }}</p>
+
+<p class="album-date">{{ album.release_date }}</p>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="hero">
+
+<div class="hero-overlay">
+
+<h1>Discover Music Like Never Before</h1>
+
+<p>
+Explore legendary artists, iconic albums, and timeless music from around the world.
+</p>
+
+<div class="hero-buttons">
+
+<a href="{% url 'artists' %}" class="primary-btn">Explore Artists</a>
+<a href="{% url 'albums' %}" class="secondary-btn">Browse Albums</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="highlight">
+
+<h2>Why MusicVerse?</h2>
+
+<div class="highlight-grid">
+
+<div class="highlight-card">
+<h3>🎤 Artists</h3>
+<p>Discover legendary musicians and rising stars.</p>
+</div>
+
+<div class="highlight-card">
+<h3>💿 Albums</h3>
+<p>Explore iconic albums and their musical journeys.</p>
+</div>
+
+<div class="highlight-card">
+<h3>🎧 Experience</h3>
+<p>A beautifully designed music discovery experience.</p>
+</div>
+
+</div>
+
+</section>
+
+{% endblock %}
